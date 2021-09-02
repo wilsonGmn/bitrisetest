@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0-dev","enabled":true,"outputFile":"app-dev-release-unsigned.apk","fullName":"devRelease","baseName":"dev-release"},"path":"AndroidManifest.xml","properties":{"packageId":"com.bewizyu.bzbitrisesample.dev","split":"","minSdkVersion":"16"}}]

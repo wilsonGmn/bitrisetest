@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/wilson/Devsu/Training/bitrise-testing-app/build/app/intermediates/incremental/mergeDevReleaseResources/merged.dir/values-da/values-da.xml",
+            "map": [
+                {
+                    "source": "/home/wilson/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/43b9df3d431599c7c5e00d2d962d0a37/res/values-da/values-da.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
