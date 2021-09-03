@@ -64,6 +64,19 @@ workflows:
     - git-clone@4.0.14: {}
     - script@1.1.5:
         title: Do anything with Script step
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+
+            # or run a script from your repository, like:
+            # bash ./path/to/script.sh
+            # not just bash, e.g.:
+            # ruby ./path/to/script.rb
     - file-downloader@1.0.1:
         inputs:
         - destination: $HOME/keystores/prod.jks
