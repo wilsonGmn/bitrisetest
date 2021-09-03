@@ -23,6 +23,20 @@ workflows:
     - git-clone@4.0.14: {}
     - script@1.1.5:
         title: Do anything with Script step
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+            # debug log
+            set -x
+
+
+
+            # or run a script from your repository, like:
+            # bash ./path/to/script.sh
+            # not just bash, e.g.:
+            # ruby ./path/to/script.rb
     - certificate-and-profile-installer@1.10.1: {}
     - flutter-installer@0.9.2: {}
     - flutter-analyze@0.1.0:
@@ -34,13 +48,7 @@ workflows:
     - flutter-build@0.9.1:
         inputs:
         - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
-        - platform: both
-    - xcode-archive@2.4.19:
-        inputs:
-        - project_path: $BITRISE_PROJECT_PATH
-        - scheme: $BITRISE_SCHEME
-        - export_method: $BITRISE_EXPORT_METHOD
-        - configuration: Release
+        - platform: android
     - deploy-to-bitrise-io@1.3.19: {}
     envs:
     - opts:
@@ -56,20 +64,6 @@ workflows:
     - git-clone@4.0.14: {}
     - script@1.1.5:
         title: Do anything with Script step
-        inputs:
-        - content: |-
-            #!/usr/bin/env bash
-            # fail if any commands fails
-            set -e
-            # debug log
-            set -x
-
-            # write your script here
-
-            # or run a script from your repository, like:
-            # bash ./path/to/script.sh
-            # not just bash, e.g.:
-            # ruby ./path/to/script.rb
     - file-downloader@1.0.1:
         inputs:
         - destination: $HOME/keystores/prod.jks
